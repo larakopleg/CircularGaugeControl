@@ -1,0 +1,36 @@
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\bin\Debug\UCResizeDemo1.exe.config
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\bin\Debug\UCResizeDemo1.exe
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\bin\Debug\UCResizeDemo1.pdb
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1.csprojAssemblyReference.cache
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\obj\Debug\MainWindow.g.cs
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\obj\Debug\App.g.cs
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1_MarkupCompile.cache
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1_MarkupCompile.lref
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\obj\Debug\MainWindow.baml
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1.g.resources
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1.Properties.Resources.resources
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1.csproj.GenerateResource.cache
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1.csproj.CoreCompileInputs.cache
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1.exe
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1.pdb
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\obj\Debug\SizableControl.g.cs
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\obj\Debug\SizableControl.baml
+C:\Users\djordje\Documents\Visual Studio 2017\Projects\UserControlResize\UCResizeDemo1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\bin\Debug\UCResizeDemo1.exe.config
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\bin\Debug\UCResizeDemo1.exe
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\bin\Debug\UCResizeDemo1.pdb
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\obj\Debug\MainWindow.g.cs
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\obj\Debug\SizableControl.g.cs
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\obj\Debug\App.g.cs
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1_MarkupCompile.cache
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1_MarkupCompile.lref
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\obj\Debug\MainWindow.baml
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\obj\Debug\SizableControl.baml
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1.g.resources
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1.Properties.Resources.resources
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1.csproj.GenerateResource.cache
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1.csproj.CoreCompileInputs.cache
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1.exe
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1.pdb
+C:\Users\Lara\Documents\_FAKS_\Arduino\_PROJEKAT\UserControlResize\UCResizeDemo1\obj\Debug\UCResizeDemo1.csprojAssemblyReference.cache

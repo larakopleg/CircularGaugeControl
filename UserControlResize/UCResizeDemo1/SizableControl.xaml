@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="UCResizeDemo1.SizableControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UCResizeDemo1"
+             mc:Ignorable="d" Height="208.664" Width="212.292"><!--SizeChanged="UserControl_SizeChanged"-->
+    <UserControl.Resources>
+        <local:HalfValueConverter x:Key="HalfValueConverter"/>
+        <local:MinValueConverter x:Key="minConverter"/>
+        <local:CenterConverter x:Key="centerConverter"/>
+        <local:GeometryConverter x:Key="geometryConverter"/>
+        <local:AngleConverter x:Key="angleConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid Name="container">
+            <Grid Name="kvadrat" Background="#f1f745" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Grid.Width>
+                    <MultiBinding Converter="{StaticResource minConverter}">
+                        <Binding Path="ActualHeight" ElementName="container"/>
+                        <Binding Path="ActualWidth" ElementName="container"/>
+                    </MultiBinding>
+                </Grid.Width>
+                <Grid.Height>
+                    <MultiBinding Converter="{StaticResource minConverter}">
+                        <Binding Path="ActualWidth" ElementName="container"/>
+                        <Binding Path="ActualHeight" ElementName="container"/>
+                    </MultiBinding>
+                </Grid.Height>
+                <!--<Ellipse Name="ellipse1" Fill="#FFF4F4F5" Stroke="Black" Margin="0,0,0,0"/>-->
+                <!--#332f80-->
+                <Path Name="sliceShow" Fill="AliceBlue" Stroke="Black">
+                    <Path.Data>
+                        <MultiBinding Converter="{StaticResource geometryConverter}">
+                            <Binding Path="ActualWidth" ElementName="container"/>
+                            <Binding Path="ActualHeight" ElementName="container"/>
+                            <Binding Path="StartingAngle" RelativeSource="{RelativeSource AncestorType=UserControl}"/>
+                            <Binding Path="EndingAngle" RelativeSource="{RelativeSource AncestorType=UserControl}"/>
+                        </MultiBinding>
+                    </Path.Data>
+                </Path>
+                <Rectangle HorizontalAlignment="Left" VerticalAlignment="Top" 
+                       Name="kazaljka" Fill="Red" Width="{Binding KazaljkaWidth, RelativeSource={RelativeSource AncestorType=UserControl}}" 
+                       Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ElementName=sliceShow, Mode=OneWay}">
+                    <Rectangle.Margin>
+                        <MultiBinding Converter="{StaticResource centerConverter}">
+                            <Binding Path="ActualWidth" ElementName="container"/>
+                            <Binding Path="ActualHeight" ElementName="container"/>
+                            <Binding Path="ActualWidth" ElementName="kazaljka"/>
+                        </MultiBinding>
+                    </Rectangle.Margin>
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="{Binding Path=Angle, Converter={StaticResource angleConverter}}"/>
+                            <TranslateTransform Y="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ElementName=sliceShow, Mode=OneWay}"/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
