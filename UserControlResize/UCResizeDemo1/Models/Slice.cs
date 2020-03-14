@@ -10,11 +10,6 @@ namespace UCResizeDemo1
 {
     class Slice
     {
-        //private Point origin = new Point(100, 100);
-        //private int radius = 100;
-        //private SliceData isecakPodaci = new SliceData();
-
-
         private class SliceData
         {
             private Point origin;
@@ -117,7 +112,6 @@ namespace UCResizeDemo1
         {
             SliceData isecakPodaci = new SliceData(origin, startAngle, terminalAngle);
  
-            // Calculate initial and terminal sides
             double angle = terminalAngle - startAngle;
             double thetaInit = ConvertToRadians(startAngle);
             double thetaEnd = ConvertToRadians(terminalAngle);

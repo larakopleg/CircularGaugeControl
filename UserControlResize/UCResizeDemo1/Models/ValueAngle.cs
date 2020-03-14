@@ -27,7 +27,6 @@ namespace UCResizeDemo1
 
         public ValueAngle(double startAngle, double terminalAngle, double minValue, double maxValue)
         {
-            //_angle = startAngle;
             _value = minValue;
 
             this.tAngle = terminalAngle;
@@ -45,11 +44,7 @@ namespace UCResizeDemo1
                 _angle = startAngle;
                 this.podeok = (tAngle - sAngle) / (maxValue - minValue);
             }
-
             
-           
-            //this.minValue = 0;
-            //this.maxValue = Math.Abs(terminalAngle - startAngle);
             this.minValue = minValue;
             this.maxValue = maxValue;
             
@@ -98,8 +93,6 @@ namespace UCResizeDemo1
             {
                 if (value >= minValue && value <= maxValue)
                 {
-                    //_value = Math.Round(value, 2);
-
                     _value = value;
                     
                     if (minValue < 0)

@@ -45,23 +45,19 @@ namespace UCResizeDemo1
 
                 double controlHeight = sizableControl.Height;
                 double controlWidth = sizableControl.Width;
-                //Console.WriteLine("originalH=" + originalHeight + " originalW=" + originalWidth + " newvisina=" + newHeight + " newsirina=" + newWidth + " percentH=" + percentH + " percentW=" + percentW);
-
+                
                 sizableControl.Height = controlHeight * percentH;
                 sizableControl.Width = controlWidth * percentW;
 
                 double percentMarginLeft = Math.Min(percentH, percentW);
                 Thickness newMargin = new Thickness();
-
-                //newMargin.Bottom = originalMargin.Bottom * percentM;
+                
                 newMargin.Left = originalMargin.Left * percentW;
-                //newMargin.Right = originalMargin.Right * percentM;
                 newMargin.Top = originalMargin.Top * percentH;
 
 
                 sizableControl.Margin = newMargin;
                 originalMargin = newMargin;
-                //Console.WriteLine("leva=" + newMargin.Left + " gornja=" + newMargin.Top);
             }
         }
     }

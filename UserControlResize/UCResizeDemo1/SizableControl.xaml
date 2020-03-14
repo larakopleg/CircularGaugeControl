@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UCResizeDemo1"
-             mc:Ignorable="d" Height="208.664" Width="212.292"><!--SizeChanged="UserControl_SizeChanged"-->
+             mc:Ignorable="d" Height="208.664" Width="212.292">
     <UserControl.Resources>
         <local:HalfValueConverter x:Key="HalfValueConverter"/>
         <local:MinValueConverter x:Key="minConverter"/>
@@ -27,8 +27,6 @@
                         <Binding Path="ActualHeight" ElementName="container"/>
                     </MultiBinding>
                 </Grid.Height>
-                <!--<Ellipse Name="ellipse1" Fill="#FFF4F4F5" Stroke="Black" Margin="0,0,0,0"/>-->
-                <!--#332f80-->
                 <Path Name="sliceShow" Fill="AliceBlue" Stroke="Black">
                     <Path.Data>
                         <MultiBinding Converter="{StaticResource geometryConverter}">

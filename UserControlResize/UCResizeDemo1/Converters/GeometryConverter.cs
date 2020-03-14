@@ -16,11 +16,6 @@ namespace UCResizeDemo1
         {
             if ((values.Length == 4) && (values[0] is double) && (values[1] is double) && (values[2] is double) && (values[3] is double))
             {
-                //foreach(object v in values)
-                //{
-                //    Console.WriteLine((double)v);
-                //}
-
                 double w = (double)values[0];
                 double h = (double)values[1];
                 double startingAngle = (double)values[2];
