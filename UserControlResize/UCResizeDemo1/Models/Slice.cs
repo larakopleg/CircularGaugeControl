@@ -86,6 +86,16 @@ namespace UCResizeDemo1
 
         private PathFigure CreateIsecak(SliceData isecakData)
         {
+            SweepDirection sweepDirection;
+
+            if (isecakData.StartAngle < 0 && isecakData.StartAngle > isecakData.TerminalAngle)
+            {
+                sweepDirection = SweepDirection.Counterclockwise;
+            } else
+            {
+                sweepDirection = SweepDirection.Clockwise;
+            }
+
             PathFigure isecak = new PathFigure();
             Point origin = isecakData.Origin;
             isecak.StartPoint = origin;
@@ -99,7 +109,7 @@ namespace UCResizeDemo1
             size,
             0,
             isecakData.IsGreaterThan180,
-            SweepDirection.Clockwise,
+            sweepDirection,
             true
             )
             );

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,9 +19,9 @@ namespace UCResizeDemo1
     /// <summary>
     /// Interaction logic for SizableControl.xaml
     /// </summary>
-    public partial class SizableControl : UserControl
+    public partial class SizableControl : UserControl, INotifyPropertyChanged
     {
-
+        
         public static readonly DependencyProperty KazaljkaWidthProperty = DependencyProperty.Register(
               "KazaljkaWidth",
               typeof(double),
@@ -38,8 +39,14 @@ namespace UCResizeDemo1
               "StartingAngle",
               typeof(double),
               typeof(SizableControl),
-              new UIPropertyMetadata(0.0));
-        
+              new FrameworkPropertyMetadata(0.0, FrameworkPropertyMetadataOptions.AffectsRender, new PropertyChangedCallback(OnStartingAngleChanged)));
+
+        private static void OnStartingAngleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            SizableControl control = (SizableControl)d;
+            control.NotifyPropertyChanged("StartingAngle");
+        }
+
         public double StartingAngle
         {
             get { return (double)GetValue(StartingAngleProperty); }
@@ -50,7 +57,13 @@ namespace UCResizeDemo1
               "EndingAngle",
               typeof(double),
               typeof(SizableControl),
-              new UIPropertyMetadata(0.0));
+              new FrameworkPropertyMetadata(360.0, FrameworkPropertyMetadataOptions.AffectsRender, new PropertyChangedCallback(OnEndingAngleChanged)));
+
+        private static void OnEndingAngleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            SizableControl control = (SizableControl)d;
+            control.NotifyPropertyChanged("EndingAngle");
+        }
 
         public double EndingAngle
         {
@@ -62,7 +75,13 @@ namespace UCResizeDemo1
               "MinValue",
               typeof(double),
               typeof(SizableControl),
-              new UIPropertyMetadata(0.0));
+              new FrameworkPropertyMetadata(0.0, FrameworkPropertyMetadataOptions.AffectsRender, new PropertyChangedCallback(OnMinValueChanged)));
+
+        private static void OnMinValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            SizableControl control = (SizableControl)d;
+            control.NotifyPropertyChanged("MinValue");
+        }
 
         public double MinValue
         {
@@ -74,7 +93,13 @@ namespace UCResizeDemo1
               "MaxValue",
               typeof(double),
               typeof(SizableControl),
-              new UIPropertyMetadata(360.0));
+              new FrameworkPropertyMetadata(360.0, FrameworkPropertyMetadataOptions.AffectsRender, new PropertyChangedCallback(OnMaxValueChanged)));
+
+        private static void OnMaxValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            SizableControl control = (SizableControl)d;
+            control.NotifyPropertyChanged("MaxValue");
+        }
 
         public double MaxValue
         {
@@ -82,9 +107,40 @@ namespace UCResizeDemo1
             set { SetValue(MaxValueProperty, value); }
         }
         
+
+        public double Value
+        {
+            get { return (double)GetValue(ValueProperty); }
+            set{ SetValue(ValueProperty, value); }
+        }
+
+
+        // Using a DependencyProperty as the backing store for Value.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ValueProperty =
+            DependencyProperty.Register("Value", typeof(double), typeof(SizableControl), new FrameworkPropertyMetadata(0.0, FrameworkPropertyMetadataOptions.AffectsRender, new PropertyChangedCallback(OnValueChanged)));
+
+        private static void OnValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            SizableControl control = (SizableControl)d;
+            control.Value = (double)e.NewValue;
+            Console.WriteLine(control.Value);
+        }
+        
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void NotifyPropertyChanged(string info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        
         public SizableControl()
         {
+            
             InitializeComponent();
+            
         }
     }
 }

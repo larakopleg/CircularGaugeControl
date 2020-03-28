@@ -51,7 +51,17 @@
                         <TransformGroup>
                             <ScaleTransform/>
                             <SkewTransform/>
-                            <RotateTransform Angle="{Binding Path=Angle, Converter={StaticResource angleConverter}}"/>
+                            <RotateTransform>
+                                <RotateTransform.Angle >
+                                    <MultiBinding Converter="{StaticResource angleConverter}">
+                                        <Binding Path="StartingAngle" RelativeSource="{RelativeSource AncestorType=UserControl}"/>
+                                        <Binding Path="EndingAngle" RelativeSource="{RelativeSource AncestorType=UserControl}"/>
+                                        <Binding Path="MinValue" RelativeSource="{RelativeSource AncestorType=UserControl}"/>
+                                        <Binding Path="MaxValue" RelativeSource="{RelativeSource AncestorType=UserControl}"/>
+                                        <Binding Path="Value" RelativeSource="{RelativeSource AncestorType=UserControl}"/>
+                                    </MultiBinding>
+                                </RotateTransform.Angle>
+                            </RotateTransform>
                             <TranslateTransform Y="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ElementName=sliceShow, Mode=OneWay}"/>
                         </TransformGroup>
                     </Rectangle.RenderTransform>

@@ -24,8 +24,6 @@ namespace UCResizeDemo1
 
         public MainWindow()
         {
-            ValueAngle va = new ValueAngle(-50, 150, 1, 10);
-            this.DataContext = va;
             InitializeComponent();
             originalMargin = sizableControl.Margin;
         }

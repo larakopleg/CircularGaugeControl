@@ -20,9 +20,9 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <local:SizableControl x:Name="sizableControl" StartingAngle="{Binding Path=SAngle}" EndingAngle="{Binding Path=TAngle}" MinValue="{Binding Path=MinValue}" MaxValue="{Binding Path=MaxValue}"  KazaljkaWidth="2" HorizontalAlignment="Left" Height="218" Margin="282,74,0,0" VerticalAlignment="Top" Width="280" Grid.Row="1"/>
-        <Slider Minimum="{Binding Path=MinValue}" Maximum="{Binding Path=MaxValue}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="300" Value="{Binding Path=Value}" Grid.Row="0"/>
-        <TextBox Text="{Binding Path=Value, Converter={StaticResource RoundNumberConverter}}"  HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="200" FontSize="30" TextAlignment="Center" Grid.Row="2"/>
+        <local:SizableControl x:Name="sizableControl" StartingAngle="30" EndingAngle="150" MinValue="0" MaxValue="100"  KazaljkaWidth="2" Value="{Binding Path=Value, ElementName=slider, Mode=TwoWay}" HorizontalAlignment="Left" Height="218" Margin="282,74,0,0" VerticalAlignment="Top" Width="280" Grid.Row="1"/>
+        <Slider x:Name="slider" Minimum="{Binding Path=MinValue, ElementName=sizableControl}" Maximum="{Binding Path=MaxValue, ElementName=sizableControl}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="300" Grid.Row="0"/>
+        <TextBlock Text="{Binding Path=Value, ElementName=sizableControl, Converter={StaticResource RoundNumberConverter}}"  HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="200" FontSize="30" TextAlignment="Center" Grid.Row="2"/>
 
     </Grid>
 </Window>
